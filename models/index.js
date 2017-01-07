@@ -12,7 +12,8 @@ module.exports.sequelize = sequelize;
 
 var Board = sequelize.import("./board");
 var Movie = sequelize.import("./movie");
-var User = seqelize.import("./user");
+var User = sequelize.import("./user");
+var MovieBoard = sequelize.import("./movie-board");
 
 //not sure if below will autogenerate through relationship declaration
 //note: dash in file name now camel case

@@ -6,6 +6,6 @@ var router = express.Router();
 var boardsController = require('../controllers/boardsController.js');
 
 router.route('/', boardsController)
-	.get(boardsController.getAll);
+	.get(boardsController.index);
 
 module.exports = router;
