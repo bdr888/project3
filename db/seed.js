@@ -86,7 +86,7 @@ var movieCreate = function() {
 		imdbID: "000000"
 	});
 	// add relational .then...
-	db.Movie.bulkCreate(sampleMovies);
+	DB.Movie.bulkCreate(sampleMovies);
 };
 
 userCreate()
