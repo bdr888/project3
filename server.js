@@ -1,8 +1,8 @@
 // setup //
-var express 	= require('express');
-var app 		= express();
-var router 		= require('./config/routes.js');
-var port 		= process.env.PORT || 3000;
+var express = require('express');
+var app = express();
+var router = require('./config/routes.js');
+var port = process.env.PORT || 3000;
 
 // dependencies //
 var bodyParser = require('body-parser');

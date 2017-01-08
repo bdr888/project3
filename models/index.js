@@ -27,8 +27,9 @@ Movie.belongsToMany(Board, {through:MovieBoard});
 Board.belongsToMany(Movie, {through:MovieBoard});
 //stopped here:
 
-Module.exports.models = {
+module.exports.models = {
 	User: User,
 	Board: Board,
-	Movie: Movie
+	Movie: Movie,
+	MovieBoard: MovieBoard
 };
