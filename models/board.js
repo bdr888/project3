@@ -1,4 +1,4 @@
-model.exports = function (sequelize,Sequelize) {
+module.exports = function (sequelize,Sequelize) {
 
 	var model = sequelize.define("board",{
 		// id: Sequelize.STRING,
