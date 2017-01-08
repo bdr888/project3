@@ -23,8 +23,8 @@ var MovieBoard = sequelize.import("./movie-board");
 Board.belongsTo(User);
 User.hasMany(Board);
 
-Movie.belongsToMany(Board, {through:MovieBoard});
-Board.belongsToMany(Movie, {through:MovieBoard});
+Movie.belongsToMany(Board, {through:MovieBoard,foreignKey: 'movieId'});
+Board.belongsToMany(Movie, {through:MovieBoard,foreignKey: 'boardId'});
 //stopped here:
 
 module.exports.models = {
