@@ -20,6 +20,24 @@ var MovieBoard = sequelize.import("./movie-board");
 // var MovieBoard = sequelize.import("./movie-board");
 
 
+//Begin: Heroku setup*****
+
+var pg = require('pg');
+
+app.get('/db', function (request, response) {
+  pg.connect(process.env.postgresql-spherical-79083, function(err, client, done) {
+    client.query('SELECT * FROM test_table', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); response.send("Error " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); }
+    });
+  });
+}); 
+
+//End: Heroku setup*****
+
 Board.belongsTo(User);
 User.hasMany(Board);
 
