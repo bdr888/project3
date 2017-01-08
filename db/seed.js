@@ -3,44 +3,37 @@ var DB = require("../models").models;
 var sampleUsers = [
 
 	{
-	id: "1",
 	name: "Buff"
 	},
 
 	{
-	id: "2",
 	name: "Auteur"
 	}
 
 ];
+console.log("sampleUsers: " + sampleUsers);
 
 var sampleBoards = [
 
 	{
-	id: "1",
-	// note: user id omitted here to see what happens
-	//userId: "1"
 	title: "Shark Movies",
 	description: "Movies about sharks"
 	},
 
 	{
-	id: "2",
-	userId: "1",
 	title: "Survival Movies",
 	description: "Movies where main character is in a survival situation"
 	},
 
 	{
 	//note id omitted
-	//id:"3",
-	userId: "2",
 	title: "Water Movies",
 	description: "Movies set in or around water"
 	}
 
 
 ];
+console.log("sampleBoards: "+ sampleBoards);
 
 var sampleMovies = [
 
@@ -65,4 +58,45 @@ var sampleMovies = [
 	}
 
 ];
+console.log("sampleMovies: "+ sampleMovies);
+
+var userCreate = function() {
+	return DB.User.create({
+		name: 'Student'
+	})
+	// add relational categories .then 
+	.then(function(user){
+		sampleBoards.forEach(function(board){
+			board.userID = user.id;
+		});
+	DB.User.bulkCreate(sampleUsers);
+	});
+};
+
+var boardCreate = function() {
+	return DB.Board.create({
+		title:"Test board",
+		description:"Makin boards"
+	})
+	.then(function(board){
+	DB.Board.bulkCreate(sampleBoards);
+	});
+
+};
+
+var movieCreate = function() {
+	return DB.Movie.create({
+		imdbID: "000000"
+	})
+	.then(function(movie){
+	DB.Movie.bulkCreate(sampleMovies);
+	});
+};
+
+userCreate()
+.then(boardCreate)
+.then(movieCreate)
+.then(function(){
+	process.exit();
+});
 
