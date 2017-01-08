@@ -66,6 +66,9 @@ var userCreate = function() {
 	})
 	// add relational categories .then 
 	.then(function(user){
+		sampleBoards.forEach(function(board){
+			board.userID = user.id;
+		});
 	DB.User.bulkCreate(sampleUsers);
 	});
 };

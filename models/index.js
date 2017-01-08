@@ -31,5 +31,5 @@ module.exports.models = {
 	User: User,
 	Board: Board,
 	Movie: Movie,
-	// MovieBoard: MovieBoard
+	MovieBoard: MovieBoard
 };
