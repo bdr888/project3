@@ -1,4 +1,4 @@
-console.log('boardsController.js hello world');
+console.log('boardController.js hello world');
 
 var db = require('../models/index.js');
 var User = db.models.User;
@@ -9,6 +9,7 @@ var Movie = db.models.Movie;
 function index(req, res) {
 	Board.findAll().then(function(boards) {
 		res.json(boards);
+		console.log("board controller index route?");
 	});
 }
 
