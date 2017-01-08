@@ -6,9 +6,9 @@ var sampleUsers = [
 	name: "Buff"
 	},
 
-	// {
-	// name: "Auteur"
-	// }
+	{
+	name: "Auteur"
+	}
 
 ];
 console.log("sampleUsers: " + sampleUsers);
@@ -16,7 +16,6 @@ console.log("sampleUsers: " + sampleUsers);
 var sampleBoards = [
 
 	{
-	//note id omitted
 	title: "Shark Movies",
 	description: "Movies about sharks"
 	},
@@ -27,6 +26,7 @@ var sampleBoards = [
 	},
 
 	{
+	//note id omitted
 	title: "Water Movies",
 	description: "Movies set in or around water"
 	}
@@ -64,33 +64,30 @@ var userCreate = function() {
 	return DB.User.create({
 		name: 'Student'
 	})
+	// add relational categories .then 
 	.then(function(user){
-		sampleUsers.forEach(function(user){
-			
-		})
-	})
-
 	DB.User.bulkCreate(sampleUsers);
-
+	});
 };
 
 var boardCreate = function() {
 	return DB.Board.create({
 		title:"Test board",
 		description:"Makin boards"
-	});
-	// add relational .then...
-
+	})
+	.then(function(board){
 	DB.Board.bulkCreate(sampleBoards);
+	});
 
 };
 
 var movieCreate = function() {
 	return DB.Movie.create({
 		imdbID: "000000"
-	});
-	// add relational .then...
+	})
+	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);
+	});
 };
 
 userCreate()
