@@ -3,7 +3,7 @@ var Sequelize = require('sequelize');
 
 
 //Figure out url for heroku
-var sequelize = new Sequelize('postgres://rkevinbloomquist@localhost:5432/filmschool');
+var sequelize = new Sequelize('https://glacial-basin-74523.herokuapp.com/postgresql-spherical-79083');
 
 //Brings in Sequelize and sequelize note: Caps/syntax
 module.exports.Sequelize = Sequelize;
