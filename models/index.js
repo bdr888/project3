@@ -1,3 +1,6 @@
+//Include
+var app = express();
+
 //Connect and export all models
 var Sequelize = require('sequelize');
 
@@ -26,7 +29,7 @@ var pg = require('pg');
 
 app.get('/db', function (request, response) {
   pg.connect(process.env.postgresql-spherical-79083, function(err, client, done) {
-    client.query('SELECT * FROM test_table', function(err, result) {
+    client.query('SELECT * FROM boards', function(err, result) {
       done();
       if (err)
        { console.error(err); response.send("Error " + err); }
