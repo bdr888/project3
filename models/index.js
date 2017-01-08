@@ -2,7 +2,7 @@
 var Sequelize = require('sequelize');
 
 
-//figure out url for heroku
+//Figure out url for heroku
 var sequelize = new Sequelize('postgres://rkevinbloomquist@localhost:5432/filmschool');
 
 //Brings in Sequelize and sequelize note: Caps/syntax
@@ -31,5 +31,5 @@ module.exports.models = {
 	User: User,
 	Board: Board,
 	Movie: Movie,
-	MovieBoard: MovieBoard
+	// MovieBoard: MovieBoard
 };

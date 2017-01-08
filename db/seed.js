@@ -6,9 +6,9 @@ var sampleUsers = [
 	name: "Buff"
 	},
 
-	{
-	name: "Auteur"
-	}
+	// {
+	// name: "Auteur"
+	// }
 
 ];
 console.log("sampleUsers: " + sampleUsers);
@@ -16,6 +16,7 @@ console.log("sampleUsers: " + sampleUsers);
 var sampleBoards = [
 
 	{
+	//note id omitted
 	title: "Shark Movies",
 	description: "Movies about sharks"
 	},
@@ -26,7 +27,6 @@ var sampleBoards = [
 	},
 
 	{
-	//note id omitted
 	title: "Water Movies",
 	description: "Movies set in or around water"
 	}
@@ -63,8 +63,12 @@ console.log("sampleMovies: "+ sampleMovies);
 var userCreate = function() {
 	return DB.User.create({
 		name: 'Student'
-	});
-	// add relational .then ...
+	})
+	.then(function(user){
+		sampleUsers.forEach(function(user){
+			
+		})
+	})
 
 	DB.User.bulkCreate(sampleUsers);
 
