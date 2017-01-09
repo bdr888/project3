@@ -36,6 +36,9 @@ var sampleBoards = [
 console.log("sampleBoards: "+ sampleBoards);
 
 var sampleMovies = [
+	{
+	imdbID:"111111"
+	},
 
 	{
 	imdbID:"222222"
@@ -64,7 +67,7 @@ var userCreate = function() {
 	.then(function(user){
 		sampleBoards.forEach(function(board){
 			board.userID = user.id;
-		});
+	});
 	DB.User.bulkCreate(sampleUsers);
 	});
 };
@@ -81,12 +84,12 @@ var boardCreate = function() {
 };
 
 var movieCreate = function() {
-	return DB.Movie.create({
+	return DB.Movie.bulkCreate([{
 		imdbID: "000000"
 	},
 	{
-		imdbID:"111111"
-	})
+		imdbID: "111111"
+	}])
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);
 	});
