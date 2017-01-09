@@ -8,10 +8,14 @@ var Movie = db.models.Movie;
 
 function index(req, res) {
 	Board.findAll().then(function(boards) {
-		res.json(boards);
+		// console.log(res);
+    res.json(boards);
 		console.log("board controller index route?");
 	});
 }
+
+// index();
+
 
 function show(req, res) {
   Board.findById(req.params.id)
