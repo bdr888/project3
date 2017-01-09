@@ -5,16 +5,7 @@ var app = express();
 //Connect and export all models
 var Sequelize = require('sequelize');
 
-// var db = require('../db/dbSetup');
-// db.connect({
-//   heroku: process.env.DATABASE_URL,
-//   localuser: process.env.DB_USER,
-// });
-
-
 //Figure out url for heroku
-// var env = require('../.env');
-// var env = require('dotenv').config();
 require('dotenv').config();
 console.log(process.env.DB_USER);
 var sequelize = new Sequelize(process.env.DATABASE_URL || process.env.DB_USER);

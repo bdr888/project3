@@ -9,6 +9,7 @@ var port = process.env.DATABASE_URL || 3000;
 var bodyParser = require('body-parser');
 
 // middleware //
+app.use(router);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
