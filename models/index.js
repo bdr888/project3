@@ -7,7 +7,7 @@ var Sequelize = require('sequelize');
 
 
 //Figure out url for heroku
-var sequelize = new Sequelize('postgres://glacial-basin-74523.herokuapp.com/postgresql-spherical-79083');
+var sequelize = new Sequelize(/*'postgres://glacial-basin-74523.herokuapp.com/postgresql-spherical-79083'*/ 'postgres://cpqxfsmhiuixkf:86604ed403b1b047cd4613456fed76eaf1a99033ca41fc3fdf8fbb6126f6e012@ec2-54-235-240-92.compute-1.amazonaws.com:5432/d87bbo9g15t8dg');
 
 //Brings in Sequelize and sequelize note: Caps/syntax
 module.exports.Sequelize = Sequelize;
@@ -17,11 +17,10 @@ module.exports.sequelize = sequelize;
 var Board = sequelize.import("./board");
 var Movie = sequelize.import("./movie");
 var User = sequelize.import("./user");
-var MovieBoard = sequelize.import("./movie-board");
-
 //not sure if below will autogenerate through relationship declaration
 //note: dash in file name now camel case
-// var MovieBoard = sequelize.import("./movie-board");
+var MovieBoard = sequelize.import("./movie-board");
+
 
 
 //Begin: Heroku setup*****

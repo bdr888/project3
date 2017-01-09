@@ -38,10 +38,6 @@ console.log("sampleBoards: "+ sampleBoards);
 var sampleMovies = [
 
 	{
-	imdbID:"111111"
-	},
-
-	{
 	imdbID:"222222"
 	},
 
@@ -87,6 +83,9 @@ var boardCreate = function() {
 var movieCreate = function() {
 	return DB.Movie.create({
 		imdbID: "000000"
+	},
+	{
+		imdbID:"111111"
 	})
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);
