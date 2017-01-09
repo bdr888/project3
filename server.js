@@ -2,7 +2,8 @@
 var express = require('express');
 var app = express();
 var router = require('./config/routes.js');
-var port = process.env.PORT || 3000;
+var env = require('dotenv').config();
+var port = process.env.DATABASE_URL || 3000;
 
 // dependencies //
 var bodyParser = require('body-parser');
