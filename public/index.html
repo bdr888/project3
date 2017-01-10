@@ -2,14 +2,23 @@
 <html>
 <head>
 	<title>Movie Website</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="/js/client.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
+	  <script src="/bower_components/angular/angular.min.js"></script>
+	  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+	  <script src="/js/client.js"></script>  
+	  <script src="/js/ngcontrollers/boardngcontroller.js"></script> 
+	  <script src="/js/ngcontrollers/boardFactory.js"></script> 
+
 </head>
-<body>
 
-<img src="graphics/mockup.jpg">
+<body ng-app = "filmschoolApp">
 
-<h2>CSS linked if red.</h2>
+<div ui-view>
+	<a ui-sref="boardsindex">Boards index</a>
+</div>
 
 </body>
 </html>

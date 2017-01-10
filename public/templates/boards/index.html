@@ -1,0 +1,27 @@
+<h2>Boards</h2>
+
+<a class="btn" href="/boards/new">Add Board</a>
+
+<div class="boards">
+
+<!-- start here when connecting route/controller -->
+  <div class="row" ng-repeat="board in boardsController.queryBoards"> 
+      <div>
+        <h2>
+          <a href="/boards/{{board.id}}">
+            {{board.title}}
+          </a>
+        </h2>
+      </div>
+      <div>
+        <a href="/boardss/{{board.id}}/edit">
+          Edit
+        </a>
+      </div>
+      <div>
+          <form ng-submit="boardssController.deleteBoard(bard)">
+            <input type="submit" value="Delete"/>
+          </form>
+        </div>
+  </div>
+</div>
