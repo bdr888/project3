@@ -7,7 +7,7 @@ Board.$inject= ['$resource'];
 
 function Board($resource) {
 	return $resource(
-		'http://localhost:3000/:id',
+		'http://localhost:3000/boards/:id',
 		null,
 		{'query': {method: 'GET', isArray: false }}
 		);
