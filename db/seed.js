@@ -56,6 +56,18 @@ var sampleMovies = [
 ];
 console.log("sampleMovies: "+ sampleMovies);
 
+
+var boardCreate = function() {
+	return DB.Board.create({
+		title:"Test board",
+		description:"Makin boards"
+	})
+	.then(function(board){
+	DB.Board.bulkCreate(sampleBoards);
+	});
+
+};
+
 var userCreate = function() {
 	return DB.User.create({
 		name: 'Student'
@@ -69,24 +81,13 @@ var userCreate = function() {
 	});
 };
 
-var boardCreate = function() {
-	return DB.Board.create({
-		title:"Test board",
-		description:"Makin boards"
-	})
-	.then(function(board){
-	DB.Board.bulkCreate(sampleBoards);
-	});
-
-};
-
 var movieCreate = function() {
-	return DB.Movie.create({
+	return DB.Movie.bulkCreate([{
 		imdbID: "000000"
 	},
 	{
 		imdbID:"111111"
-	})
+	}])
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);
 	});

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Movie Website</title>
+	<title>Film School</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="/js/client.js"></script>
 </head>
 <body>
-
-<img src="graphics/mockup.jpg">
-
-<h2>CSS linked if red.</h2>
+	<h1>Film School</h1>
+	<h2>LOGIN (change)</h2>
+		<form>
+		<!-- dbl check form and label definitions once functionality is built -->
+		<div class = "fields">
+			<label for = "name">USER NAME</label>
+			<input ng-model = "userNewController.newUser.name">
+			<br>
+			<label for = "password">PASSWORD</label>
+			<input ng-model = "userNewController.newUser.password">
+		</div>
+		</form>
+			<a href = "#">TO BOARDS</a>
+			<br>
+			<a href = "#">NEW USER</a>
 
 </body>
 </html>
