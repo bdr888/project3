@@ -1,9 +1,11 @@
+console.log('boardngcontroller.js hello world');
+
 angular.module('filmschoolApp')
 	.controller('BoardController', boardController);
 
 boardController.$inject = ['BoardFactory', '$resource'];
 
-function squareController (SquareFactory, $resource) {
+function boardController (BoardFactory, $resource) {
 	var self = this;
 	self.all = [];
 	self.queryBoards = queryBoards;
@@ -15,4 +17,9 @@ function squareController (SquareFactory, $resource) {
 
 	queryBoards();
 
+	// function showBoards() {
+	// 	console.log()
+	// }
+
 }
+
