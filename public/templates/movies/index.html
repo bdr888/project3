@@ -3,22 +3,16 @@
 
 <div class="movies">
   <div class="row" ng-repeat="movie in moviesController.allMovies">
-    <ul>
-      <li>
+      <div>
         <h2>
           <a href="/movies/{{movie.id}}">
             {{movie.title}}
           </a>
          <img ng-src="{{movie.Poster}}" alt="{{movie.Title}} poster">
         </h2>
-      </li>
-      <li>
-        <li>
+      </div>
           <form ng-submit="MoviesController.deleteMovie(movie)">
             <input type="submit" value="Delete"/>
           </form>
-        </li>
-      </li>
-    </ul>
   </div>
 </div>
