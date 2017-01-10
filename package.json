@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/briandridge/project3#readme",
   "dependencies": {
+    "angular-ui-router": "^0.3.2",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "dotenv": "^4.0.0",

@@ -1,13 +1,25 @@
 console.log("client.js hello world");
 
-angular.module("filmschoolApp", ['ngRoute', 'ngResource'])
-	.config(function($routeProvider,$locationProvider){
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: false
+angular.module("filmschoolApp", ['ui.router', 'ngResource'])
+	.config(function($stateProvider,$locationProvider, $urlRouterProvider){
+    
+    console.log("client.js");
+
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
+
+    // For any unmatched url, redirect to /boards
+  	// $urlRouterProvider.otherwise("/templates/boards/show.html");
+
+    $stateProvider
+    .state('boardsindex', {
+      url: "/boards",
+      templateUrl: "/templates/boards/show.html",
+      controller: 'BoardController'
     });
 
-    $routeProvider
     	//Main Routes
       // .when('/', {
       //   templateUrl: '/templates/home.html'
@@ -19,10 +31,10 @@ angular.module("filmschoolApp", ['ngRoute', 'ngResource'])
 			//Artist Routes
 			  
 			// index
-			.when('/boards', {
-				templateUrl: '/templates/boards/index.html',
-				controller: "BoardController as boardsController"
-			});
+			// .when('/boards', {
+			// 	templateUrl: '/templates/boards/show.html',
+			// 	controller: "BoardController as boardController"
+			// });
 
 		// 	// new
 		// 	.when('/artists/new', {
