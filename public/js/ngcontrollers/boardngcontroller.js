@@ -1,5 +1,3 @@
-console.log('boardngcontroller.js hello world');
-
 angular.module('filmschoolApp')
 	.controller('BoardController', boardController);
 

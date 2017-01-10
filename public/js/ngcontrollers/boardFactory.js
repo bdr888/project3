@@ -1,5 +1,3 @@
-console.log("boardFactory.js Hello World");
-
 angular.module("filmschoolApp")
  .factory("BoardFactory", Board);
 
