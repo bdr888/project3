@@ -13,9 +13,9 @@ app.use(router);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
-app.use(function(req, res){
-   res.sendFile(__dirname + '/public/index.html');
-});
+// app.use(function(req, res){
+//    res.sendFile(__dirname + '/public/index.html');
+// });
 
 
 // start server //
