@@ -24,8 +24,8 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
 
     .state('boardsindex', {
       url: "/boards",
-      templateUrl: "/templates/boards/show.html",
-      controller: 'BoardController'
+      templateUrl: "/templates/boards/index.html",
+      controller: 'BoardController as BoardController'
     })
 
 
