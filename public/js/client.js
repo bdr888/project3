@@ -36,7 +36,7 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     .state('moviesindex', {
     	url:"/movies",
     	templateUrl: "/templates/movies/show.html",
-    	controller: 'MovieController'
+    	controller: 'MovieController as movieController'
     });
 
     // .state('moviesshow', {
