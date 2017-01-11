@@ -12,6 +12,7 @@
     </div>
   </div>
 
+<<<<<<< HEAD
 <div ng-repeat="board in boardController.all">
   <div class="card" style="width: 20rem;">
     <!-- <img class="card-img-top" src="..." alt="image"> -->
@@ -21,6 +22,27 @@
       <p class="card-text">{{board.description}}</p>
       <a href="/boards/{{board.id}}" class="btn btn-primary">View Board</a>
     </div>
+=======
+<!-- start here when connecting route/controller -->
+  <div class="row" ng-repeat="board in boardsController.queryBoards"> 
+      <div>
+        <h2>
+          <a href="/boards/{{board.id}}">
+            {{board.title}}
+          </a>
+        </h2>
+      </div>
+      <div>
+        <a href="/boardss/{{board.id}}/edit">
+          Edit
+        </a>
+      </div>
+      <div>
+          <form ng-submit="boardssController.deleteBoard(bord)">
+            <input type="submit" value="Delete"/>
+          </form>
+        </div>
+>>>>>>> cced45584fd27636b848f973830e4864be5af778
   </div>
 </div>
 </div>

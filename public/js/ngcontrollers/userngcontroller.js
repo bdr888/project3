@@ -11,7 +11,7 @@ function userController (UserFactory, $resource) {
 	self.queryUsers = queryUsers;
 
 	function queryUsers() {
-		self.all = BoardFactory.query({});
+		self.all = UserFactory.query({});
 		console.log(self.all);
 	}
 
