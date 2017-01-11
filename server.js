@@ -16,6 +16,8 @@ app.use(express.static('public'));
 app.use(function(req, res){
    res.sendFile(__dirname + '/public/index.html');
 });
+// need this for direct nav through url bar and refresh page with ui-router
+
 
 
 // start server //

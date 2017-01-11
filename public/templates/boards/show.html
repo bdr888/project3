@@ -1,9 +1,28 @@
-<h2>laksjdflkasjdflkjsadf</h2>
+<h2>New Board</h2>
 
-<div ng-controller = "BoardController as boards">
-	
-	<div ng-repeat="boards in BoardController.all">
-		
-	</div>
+<form ng-submit="boardController.saveBoard()">
+  <label for="name">Title:</label>
+  <input ng-model="boardController.newBoard.title">
 
-</div>
+  <label for="photoUrl">Photo URL:</label>
+  <input ng-model="boardController.newBoard.photoUrl">
+
+  <label for="nationality">Description:</label>
+  <input ng-model="boardController.newBoard.description">
+
+  <input type="submit" value="Create">
+</form>
+
+
+
+<div class="row">
+
+ <div class="card" style="width: 20rem;">
+    <!-- <img class="card-img-top" src="..." alt="image"> -->
+    <div class="card-block">
+      <h4 class="card-title">New Board            
+            </h4>
+      <p class="card-text">Add a new board!</p>
+      <a href="/boards/new" class="btn btn-primary">New Board</a>
+    </div>
+  </div>
