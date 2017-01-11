@@ -1,9 +1,22 @@
-<h2>laksjdflkasjdflkjsadf</h2>
-
-<div ng-controller = "BoardController as boards">
-	
-	<div ng-repeat="boards in BoardController.all">
-		
-	</div>
-
-</div>
+<div class="row" ng-repeat="board in boardController.getOneBoard"> 
+      <div class="board">
+        <h2>
+          <a href="/boards/{{board.id}}">
+            {{board.title}}
+          </a>
+        </h2>
+        <h3>
+          {{board.description}}
+        </h3>
+      </div>
+      <div>
+        <a href="/boards/{{board.id}}/edit">
+          Edit
+        </a>
+      </div>
+      <!-- <div>
+          <form ng-submit="BoardController.deleteBoard(bard)">
+            <input type="submit" value="Delete"/>
+          </form>
+        </div> -->
+  </div>
