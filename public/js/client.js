@@ -26,11 +26,30 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
       url: "/boards",
       templateUrl: "/templates/boards/show.html",
       controller: 'BoardController'
-    });
+    })
 
 
     // Movie Routes //
+
     // put movie routes here
+
+    .state('moviesindex', {
+    	url:"/movies",
+    	templateUrl: "/templates/movies/show.html",
+    	controller: 'MovieController as movieController'
+    });
+
+    // .state('moviesshow', {
+    // 	url:"/movies/:id",
+    // 	templateUrl:"/templates/movies/show.html",
+    	// controller: 'MovieController'
+    // });
+
+    // User Routes //
+
+
+
+ 
 
 
 }); //end of module 

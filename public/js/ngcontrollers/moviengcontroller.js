@@ -1,10 +1,9 @@
 console.log('moviengcontroller.js hello World');
 
 angular.module('filmschoolApp')
-	.controlller('MovieController', movieController);
+	.controller('MovieController', movieController);
 
-	movieController.$inject = ['MovieFactory',$resource];
-
+	movieController.$inject = ['MovieFactory','$resource'];
 	function movieController (MovieFactory,$resource) {
 		var self = this;
 		self.all = [];
@@ -14,6 +13,6 @@ angular.module('filmschoolApp')
 			self.all = MovieFactory.query({});
 			console.log(self.all);
 		}
-
 		queryMovies();
+
 	}
