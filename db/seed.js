@@ -83,9 +83,11 @@ var userCreate = function() {
 
 var movieCreate = function() {
 	return DB.Movie.bulkCreate([{
+		Title: "Jaws",
 		imdbID: "000000"
 	},
 	{
+		Title:"The Shallows",
 		imdbID:"111111"
 	}])
 	.then(function(movie){
