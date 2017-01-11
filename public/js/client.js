@@ -24,7 +24,6 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
 
     .state('boardsindex', {
       url: "/boards",
-
       templateUrl: "/templates/boards/index.html",
       controller: 'BoardController as boardController'
     })
@@ -34,6 +33,12 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     //   templateUrl: "/templates/boards/show.html",
     //   controller: 'BoardController as boardController'
     // });
+
+    .state('boardsnew', {
+        url: "/boards/new",
+        templateUrl: "/templates/boards/new.html",
+        controller: 'BoardController as boardController'
+    })
 
 
 

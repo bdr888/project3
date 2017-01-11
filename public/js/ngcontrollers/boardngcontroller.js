@@ -8,7 +8,7 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	self.all = [];
 	self.queryBoards = queryBoards;
 	// self.getOneBoard = getOneBoard;
-
+	self.newBoard = newBoard;
 
 	function queryBoards() {
 		self.all = BoardFactory.query({});
@@ -24,6 +24,15 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	// 	// 	});
 	// 	// });
 
+	function newBoard() {
+		console.log(this.newBoard);
+		self.newBoard = BoardFactory.save('/api/boards/', self.newBoard)
+			.then(function(response) {
+				var board = response.data;
+				$state.path("/boards/" + board.id);
+			});
+
+	}
 
 
 	// 	self.getOneBoard = BoardFactory.get($stateParams.id);
@@ -33,3 +42,13 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	// getOneBoard();
 
 }
+
+
+// function saveArtist() {
+// 		console.log(vm.newArtist);
+// 		$http.post('/api/artists/', vm.newArtist)
+// 			.then(function(response) {
+// 				var artist = response.data;
+// 				$location.path("/artists/" + artist.id);
+// 			});		
+// 	}

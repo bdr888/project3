@@ -19,6 +19,7 @@ app.use(function(req, res){
 // need this for direct nav through url bar and refresh page with ui-router
 
 
+
 // start server //
 app.listen(port, function() {
 	console.log("listening on " + port);
