@@ -24,9 +24,16 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
 
     .state('boardsindex', {
       url: "/boards",
-      templateUrl: "/templates/boards/show.html",
-      controller: 'BoardController'
+      templateUrl: "/templates/boards/index.html",
+      controller: 'BoardController as boardController'
+       // as boardController
     });
+
+    // .state('boardshow', {
+    //   url: "/boards/:_id",
+    //   templateUrl: "/templates/boards/show.html",
+    //   controller: 'BoardController'
+    // });
 
 
     // Movie Routes //

@@ -12,8 +12,10 @@ function boardController (BoardFactory, $resource) {
 		self.all = BoardFactory.query({});
 		console.log(self.all);
 	}
-
+		// console.log(self.all);
 	queryBoards();
+
+	console.log(self.all);
 
 	// function showBoards() {
 	// 	console.log()

@@ -5,23 +5,29 @@
 <div class="boards">
 
 <!-- start here when connecting route/controller -->
-  <div class="row" ng-repeat="board in boardsController.queryBoards"> 
+<!-- <div ng-controller="BoardController">  -->
+
+  <div class="row" ng-repeat="board in boardController.all"> 
       <div>
         <h2>
           <a href="/boards/{{board.id}}">
             {{board.title}}
           </a>
         </h2>
+        <h3>
+          {{board.description}}
+        </h3>
       </div>
       <div>
-        <a href="/boardss/{{board.id}}/edit">
+        <a href="/boards/{{board.id}}/edit">
           Edit
         </a>
       </div>
-      <div>
-          <form ng-submit="boardssController.deleteBoard(bard)">
+      <!-- <div>
+          <form ng-submit="BoardController.deleteBoard(bard)">
             <input type="submit" value="Delete"/>
           </form>
-        </div>
+        </div> -->
   </div>
+  <!-- </div> -->
 </div>
