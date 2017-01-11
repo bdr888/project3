@@ -25,30 +25,34 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	// 	// });
 
 	function newBoard() {
-		console.log(this.newBoard);
-		self.newBoard = BoardFactory.save('/api/boards/', self.newBoard)
-			.then(function(response) {
-				var board = response.data;
-				$state.path("/boards/" + board.id);
+		console.log(self.createdBoard);
+		var title = self.createdBoard.title;
+		var description = self.createdBoard.description;
+		console.log(title);
+		console.log(description);
+		var boardObject = {'title': title, 'description': description};
+
+		BoardFactory.save(boardObject, function(thing) {
+				console.log(thing);
+				
+				// $state.path("/boards/" + response.id);
 			});
 
 	}
-
-
-	// 	self.getOneBoard = BoardFactory.get($stateParams.id);
-	// 	// console.log();
-	// }
-
-	// getOneBoard();
-
 }
 
+// newBoardController.$inject = ["$http", "$location"];
+// function newBoardController($http, $location) {
+// 	var self = this;
+// 	self.newBoard = newBoard;
 
-// function saveArtist() {
-// 		console.log(vm.newArtist);
-// 		$http.post('/api/artists/', vm.newArtist)
+// 	function saveBoard() {
+// 		console.log(self.newBoard);
+// 		$http.post('/api/boards/', self.newBoard)
 // 			.then(function(response) {
-// 				var artist = response.data;
-// 				$location.path("/artists/" + artist.id);
+// 				var board = response.data;
+// 				$location.path("/artists/" + board.id);
 // 			});		
 // 	}
+
+// }
