@@ -7,6 +7,8 @@ Digital movie library
 
 Film School lets you create a digital library for the movies you’ve seen and want to see. You can make your own sections based on genre, director, actor, year, etc…
 
+---
+
 ## Concept and Research
 It is primarily for anyone who has trouble deciding what movie to watch.
 
@@ -27,13 +29,6 @@ It will allow you to have a digital “library” of the movies you’ve seen, w
 
 It will allow you to share your section or library with friends.
 
-Layout
-Home page
-Shows your sections with thumbnails of the movie poster
+###### Wireframes and mockup
 
-Section page
-Allows you to view and edit your section
-Detailed view of movie
-
-New section page
-Create a new section - similar to section page
+# <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/data%20model.JPG" height="100">
