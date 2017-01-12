@@ -3,6 +3,8 @@ Project 3
 ## Film School 
 Digital movie library
 
+Use the app on Heroku: *<a href="https://glacial-basin-74523.herokuapp.com/">Film school</a>
+
 Film School lets you create a digital library for the movies you’ve seen and want to see. You can make your own sections based on genre, director, actor, year, etc…
 
 ---
