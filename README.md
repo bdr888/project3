@@ -1,7 +1,5 @@
 Project 3
 
-Trello board: https://trello.com/b/TiYxP900/project-3
-
 ## Film School 
 Digital movie library
 
@@ -29,7 +27,9 @@ It will allow you to have a digital “library” of the movies you’ve seen, w
 
 It will allow you to share your section or library with friends.
 
-** Wireframes and mockup **
+---
+
+## Wireframes and mockup
 
 *Data Model
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/data%20model.JPG" height="100g">
@@ -45,4 +45,11 @@ It will allow you to share your section or library with friends.
 
 *Add a new board
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/new%20board.JPG" height="100g">
+
+---
+
+## User stories
+
+Trello Board: https://trello.com/b/TiYxP900/project-3
+
 
