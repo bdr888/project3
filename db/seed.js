@@ -105,8 +105,27 @@ Type: "movie",
 Response: "True"
 },
 	{
-		Title:"The Shallows",
-		imdbID:"111111"
+Title: "The Shallows",
+Year: "2016",
+Rated: "PG-13",
+Released: "24 Jun 2016",
+Runtime: "86 min",
+Genre: "Drama, Horror, Thriller",
+Directr: "Jaume Collet-Serra",
+Writer: "Anthony Jaswinski",
+Actors: "Blake Lively, Óscar Jaenada, Angelo Josue Lozano Corzo, Brett Cullen",
+Plot: "A mere 200 yards from shore, surfer Nancy is attacked by a great white shark, with her short journey to safety becoming the ultimate contest of wills.",
+Language: "English, Spanish",
+Country: "USA",
+Awards: "2 nominations.",
+Poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MTA4MzU4Ml5BMl5BanBnXkFtZTgwNjUxNjczODE@._V1_SX300.jpg",
+Metascore: "59",
+imdbRating: "6.4",
+imdbVotes: "59,522",
+imdbID: "tt4052882",
+Type: "movie",
+Response: "True"
+}
 	}])
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);

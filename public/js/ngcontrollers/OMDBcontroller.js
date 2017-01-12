@@ -1,4 +1,4 @@
-console.log('omdbController.js hello World');
+console.log('OMDBController.js hello World');
 
 angular.module('filmschoolApp')
 	.controller('OmdbController', OmdbController);
