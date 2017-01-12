@@ -83,12 +83,49 @@ var userCreate = function() {
 
 var movieCreate = function() {
 	return DB.Movie.bulkCreate([{
-		Title: "Jaws",
-		imdbID: "000000"
-	},
+Title: "Jaws",
+Year: "1975",
+Rated: "PG",
+Released: "20 Jun 1975",
+Runtime: "124 min",
+Genre: "Adventure, Drama, Thriller",
+Director: "Steven Spielberg",
+Writer: "Peter Benchley (screenplay), Carl Gottlieb (screenplay), Peter Benchley (based on the novel by)",
+Actors: "Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary",
+Plot: "When a gigantic great white shark begins to menace the small island community of Amity, a police chief, a marine scientist and a grizzled fisherman set out to stop it.",
+Language: "English",
+Country: "USA",
+Awards: "Won 3 Oscars. Another 10 wins & 16 nominations.",
+Poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg",
+Metascore: "86",
+imdbRating: "8.0",
+imdbVotes: "424,356",
+imdbID: "tt0073195",
+Type: "movie",
+Response: "True"
+},
 	{
-		Title:"The Shallows",
-		imdbID:"111111"
+Title: "The Shallows",
+Year: "2016",
+Rated: "PG-13",
+Released: "24 Jun 2016",
+Runtime: "86 min",
+Genre: "Drama, Horror, Thriller",
+Directr: "Jaume Collet-Serra",
+Writer: "Anthony Jaswinski",
+Actors: "Blake Lively, Óscar Jaenada, Angelo Josue Lozano Corzo, Brett Cullen",
+Plot: "A mere 200 yards from shore, surfer Nancy is attacked by a great white shark, with her short journey to safety becoming the ultimate contest of wills.",
+Language: "English, Spanish",
+Country: "USA",
+Awards: "2 nominations.",
+Poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA1MTA4MzU4Ml5BMl5BanBnXkFtZTgwNjUxNjczODE@._V1_SX300.jpg",
+Metascore: "59",
+imdbRating: "6.4",
+imdbVotes: "59,522",
+imdbID: "tt4052882",
+Type: "movie",
+Response: "True"
+}
 	}])
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);

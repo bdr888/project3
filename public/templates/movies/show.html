@@ -1,12 +1,9 @@
 
-<div ng-repeat = "movie in movieController.all">
-<h2>{{movie.Title}}</h2>
-	<img ng-src="{{movie.Poster}}" alt="{{movie.Title}} photo">
-	<h3>{{movieController.Year}}</h3>
-	<h3>{{movieController.oneMovie.Rated}}</h3>
-	<h3>{{movieController.oneMovie.Released}}</h3>
-	<h3>{{movieController.oneMovie.Runtime}}</h3>
-	<h3>{{movieController.oneMovie.Director}}</h3>
-	<h3>{{movie.imdbID}}</h3>
-	<h3>{{movieController.oneMovieimdbVotes}}</h3>
+
+
+<div ng-repeat="movie in MovieIndexController.allMovies">
+	<img ng-src = "{{movie.Poster}}" alt = "{{movie.Title}}">
+	<h1>{{movie.Title}} </h1>
+	<h4>{{movie.Released}}</h4>
+	<h3>{{movie.Rated}}</h3>
 </div>
