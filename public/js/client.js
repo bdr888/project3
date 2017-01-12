@@ -49,8 +49,24 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     .state('moviesindex', {
     	url:"/movies",
     	templateUrl: "/templates/movies/show.html",
-    	controller: 'MovieController as movieController'
+    	controller: 'MovieIndexController as MovieIndexController'
+    })
+
+    .state('movieSearch', {
+    	url:"/search",
+    	templateUrl: "/templates/movies/movieSearch.html",
+    	controller: 'OmdbController as omdbController'
+
     });
+
+ //    $stateProvider
+	// //omdb search route
+ //    .state('OMDBsearch',{
+ //    	url:"https://www.omdbapi.com/?t=",
+ //    	templateUrl: "/templates/movies/movieSearch.html",
+ //    	controller: 'OmdbController as omdbController'
+
+    // });
 
     // .state('moviesshow', {
     // 	url:"/movies/:id",

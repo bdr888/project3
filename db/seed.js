@@ -83,9 +83,27 @@ var userCreate = function() {
 
 var movieCreate = function() {
 	return DB.Movie.bulkCreate([{
-		Title: "Jaws",
-		imdbID: "000000"
-	},
+Title: "Jaws",
+Year: "1975",
+Rated: "PG",
+Released: "20 Jun 1975",
+Runtime: "124 min",
+Genre: "Adventure, Drama, Thriller",
+Director: "Steven Spielberg",
+Writer: "Peter Benchley (screenplay), Carl Gottlieb (screenplay), Peter Benchley (based on the novel by)",
+Actors: "Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary",
+Plot: "When a gigantic great white shark begins to menace the small island community of Amity, a police chief, a marine scientist and a grizzled fisherman set out to stop it.",
+Language: "English",
+Country: "USA",
+Awards: "Won 3 Oscars. Another 10 wins & 16 nominations.",
+Poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg",
+Metascore: "86",
+imdbRating: "8.0",
+imdbVotes: "424,356",
+imdbID: "tt0073195",
+Type: "movie",
+Response: "True"
+},
 	{
 		Title:"The Shallows",
 		imdbID:"111111"

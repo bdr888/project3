@@ -3,7 +3,7 @@
 <head>
 	<title>Movie Website</title>
 
-	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+	  <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
 	  <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
 	  <script src="/bower_components/angular/angular.min.js"></script>
 	  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -11,9 +11,14 @@
 	  <script src="/js/client.js"></script>  
 	  <script src="/js/ngcontrollers/boardngcontroller.js"></script> 
 	  <script src="/js/ngcontrollers/boardFactory.js"></script> 
-	  <script src="/js/ngcontrollers/moviengcontroller.js"></script>
+	  <script src="/js/ngcontrollers/movieController.js"></script>
       <script src="/js/ngcontrollers/movieFactory.js"></script>
+	<!-- added after $http switch -->
+      <script src="/js/ngcontrollers/OMDBcontroller.js"></script>
+
       <script src="/js/ngcontrollers/boardController.js"></script>
+     <!--  <script src="/js/ngcontrollers/movieController.js"></script> -->
+
 </head>
 
 <body ng-app = "filmschoolApp">
@@ -22,6 +27,8 @@
 		<div ui-view>
 			<a ui-sref="boardsindex">Boards index</a>
 			<a ui-sref="moviesindex">Movies index</a>
+			<a ui-sref="movieSearch">OMDB search</a>
+
 		</div>		
 
 	</div><!-- end container div -->
