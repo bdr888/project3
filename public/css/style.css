@@ -1,15 +1,19 @@
-.card-inverse {
-	background-color: #333; 
-	border-color: #333
+
+
+/*.card-title {
+  color: white;
 }
 
-.card {
-	margin: 10px;
-}
-
+.card-text {
+  color: white;
+}*/
 
 body {
-	/*background-color: #D3D3D3;*/
+	background-color: #D3D3D3;
 }
+
+/*.col-md-4 {
+  display: inline-block;
+}*/
 
 

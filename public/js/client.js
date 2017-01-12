@@ -59,7 +59,7 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     	templateUrl: "/templates/movies/movieSearch.html",
     	controller: 'OmdbController as omdbController'
 
-    });
+    })
 
  //    $stateProvider
 	// //omdb search route
@@ -79,7 +79,12 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     // User Routes //
 
 
+.state('home', {
+        url:"/home",
+        templateUrl: "/templates/home.html",
+        controller: 'BoardIndexController as BoardIndexController'
 
+    });
  
 
 
