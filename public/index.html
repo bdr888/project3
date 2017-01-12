@@ -18,11 +18,22 @@
 
 <body ng-app = "filmschoolApp">
 	<div class="container">
-		
-		<div ui-view>
+	
+	<nav>
+      <ul>
+        <li><a href="/">Tun.r</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/artists">Artists</a></li>
+        <li><a href="/artists/new">Add Artist</a></li>
+      </ul>
+    </nav>
+
+	<section class="main">
+		<div class="main" ui-view>
 			<a ui-sref="boardsindex">Boards index</a>
 			<a ui-sref="moviesindex">Movies index</a>
-		</div>		
+		</div>	
+	</section>	
 
 	</div><!-- end container div -->
 
