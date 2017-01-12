@@ -1,13 +1,14 @@
 <h2>New Board</h2>
 
-<!--Make sure to allign/name controllers and routes to attributes once built -->
-<form ng-submit = "boardController.newBoard()">
+<form ng-submit="BoardNewController.saveBoard()">
+  <label for="title">Title:</label>
+  <input ng-model="BoardNewController.newBoard.title">
 
-	<label for = "title">Title:</label>
-	<input ng-model = "boardController.createdBoard.title" placeholder = "Sci-fi">
+<!--   <label for="photoUrl">Photo URL:</label>
+  <input ng-model="boardNewController.newBoard.photoUrl"> -->
 
-	<label for = "description">Description:</label>
-	<input ng-model = "boardController.createdBoard.description" placeholder = "Favorite Sci-fi flicks">
+  <label for="description">Description:</label>
+  <input ng-model="BoardNewController.newBoard.description">
 
-	<input type = "submit" value = "Create">
+  <input type="submit" value="Create">
 </form>

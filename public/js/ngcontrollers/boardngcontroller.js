@@ -1,9 +1,9 @@
 angular.module('filmschoolApp')
 	.controller('BoardController', boardController);
 
-boardController.$inject = ['BoardFactory', '$resource', '$stateParams'];
+boardController.$inject = ['BoardFactory', '$resource', '$stateParams', '$state'];
 
-function boardController (BoardFactory, $resource, $stateParams) {
+function boardController (BoardFactory, $resource, $stateParams, $state) {
 	var self = this;
 	self.all = [];
 	self.queryBoards = queryBoards;
@@ -13,8 +13,23 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	function queryBoards() {
 		self.all = BoardFactory.query({});
 	}
-
 	queryBoards();
+
+ArtistNewController.$inject = ["$http", "$location"];
+function ArtistNewController($http, $location) {
+	var vm = this;
+	vm.saveArtist = saveArtist;
+
+	function saveArtist() {
+		console.log(vm.newArtist);
+		$http.post('/api/artists/', vm.newArtist)
+			.then(function(response) {
+				var artist = response.data;
+				$location.path("/artists/" + artist.id);
+			});		
+	}
+
+}
 
 	// function getOneBoard() {
 	// 	// self.getOneBoard = BoardFactory.get(function(id) {
@@ -25,17 +40,20 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	// 	// });
 
 	function newBoard() {
-		console.log(self.createdBoard);
-		var title = self.createdBoard.title;
-		var description = self.createdBoard.description;
-		console.log(title);
-		console.log(description);
-		var boardObject = {'title': title, 'description': description};
+		// self.board = new Board();
 
-		BoardFactory.save(boardObject, function(thing) {
-				console.log(thing);
+		// console.log(self.createdBoard);
+		// console.log(self.createdBoard.title);
+		// var title = self.createdBoard.title;
+		// var description = self.createdBoard.description;
+		// console.log(title);
+		// console.log(description);
+		var boardObject = {'title': self.createdBoard.title, 'description': self.createdBoard.description};
+
+		BoardFactory.save(boardObject, function() {
+				console.log(self.createdBoard);
 				
-				// $state.path("/boards/" + response.id);
+				// $state.go("/boards/" + response.id);
 			});
 
 	}
