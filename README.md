@@ -31,19 +31,19 @@ It will allow you to share your section or library with friends.
 
 ## Wireframes and mockup
 
-*Data Model
+####Data Model
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/data%20model.JPG" height="100g">
 
-*Home Page
+####Home Page
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/homepage.JPG" height="100g">
 
-*View all boards
+####View all boards
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/all%20boards.JPG" height="100g">
 
-*View one board
+####View one board
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/single%20board.JPG" height="100g">
 
-*Add a new board
+####Add a new board
 # <img src="https://github.com/briandridge/project3/blob/boards/wireframe%20images/new%20board.JPG" height="100g">
 
 ---
@@ -51,5 +51,33 @@ It will allow you to share your section or library with friends.
 ## User stories
 
 Trello Board: https://trello.com/b/TiYxP900/project-3
+
+
+---
+
+## Project Groups
+
+###### Who are my group members?
+
+#### Group 1 - Movie Library
+
+* Brian
+* Kevin
+* Erik
+
+#### Group 2 - Weather App
+
+* Larry
+* Merry
+* Guy
+* Micah
+
+#### Group 3 - Travel Planner
+
+* Nate
+* Clay
+* Gisella
+
+---
 
 
