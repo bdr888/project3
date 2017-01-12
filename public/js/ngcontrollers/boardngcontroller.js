@@ -1,9 +1,9 @@
 angular.module('filmschoolApp')
 	.controller('BoardController', boardController);
 
-boardController.$inject = ['BoardFactory', '$resource', '$stateParams'];
+boardController.$inject = ['BoardFactory', '$resource', '$stateParams', '$state'];
 
-function boardController (BoardFactory, $resource, $stateParams) {
+function boardController (BoardFactory, $resource, $stateParams, $state) {
 	var self = this;
 	self.all = [];
 	self.queryBoards = queryBoards;
@@ -13,8 +13,23 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	function queryBoards() {
 		self.all = BoardFactory.query({});
 	}
-
 	queryBoards();
+
+ArtistNewController.$inject = ["$http", "$location"];
+function ArtistNewController($http, $location) {
+	var vm = this;
+	vm.saveArtist = saveArtist;
+
+	function saveArtist() {
+		console.log(vm.newArtist);
+		$http.post('/api/artists/', vm.newArtist)
+			.then(function(response) {
+				var artist = response.data;
+				$location.path("/artists/" + artist.id);
+			});		
+	}
+
+}
 
 	// function getOneBoard() {
 	// 	// self.getOneBoard = BoardFactory.get(function(id) {
@@ -25,30 +40,37 @@ function boardController (BoardFactory, $resource, $stateParams) {
 	// 	// });
 
 	function newBoard() {
-		console.log(this.newBoard);
-		self.newBoard = BoardFactory.save('/api/boards/', self.newBoard)
-			.then(function(response) {
-				var board = response.data;
-				$state.path("/boards/" + board.id);
+		// self.board = new Board();
+
+		// console.log(self.createdBoard);
+		// console.log(self.createdBoard.title);
+		// var title = self.createdBoard.title;
+		// var description = self.createdBoard.description;
+		// console.log(title);
+		// console.log(description);
+		var boardObject = {'title': self.createdBoard.title, 'description': self.createdBoard.description};
+
+		BoardFactory.save(boardObject, function() {
+				console.log(self.createdBoard);
+				
+				// $state.go("/boards/" + response.id);
 			});
 
 	}
-
-
-	// 	self.getOneBoard = BoardFactory.get($stateParams.id);
-	// 	// console.log();
-	// }
-
-	// getOneBoard();
-
 }
 
+// newBoardController.$inject = ["$http", "$location"];
+// function newBoardController($http, $location) {
+// 	var self = this;
+// 	self.newBoard = newBoard;
 
-// function saveArtist() {
-// 		console.log(vm.newArtist);
-// 		$http.post('/api/artists/', vm.newArtist)
+// 	function saveBoard() {
+// 		console.log(self.newBoard);
+// 		$http.post('/api/boards/', self.newBoard)
 // 			.then(function(response) {
-// 				var artist = response.data;
-// 				$location.path("/artists/" + artist.id);
+// 				var board = response.data;
+// 				$location.path("/artists/" + board.id);
 // 			});		
 // 	}
+
+// }

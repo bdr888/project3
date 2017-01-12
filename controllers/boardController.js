@@ -1,5 +1,3 @@
-console.log('boardController.js hello world');
-
 var db = require('../models/index.js');
 var User = db.models.User;
 var Board = db.models.Board;
@@ -29,8 +27,10 @@ function show(req, res) {
 }
 
 function create(req, res) {
-	Board.create(req.body)
-  .then(function(board){
+
+	Board.create(req.body).then(function(board){
+    console.log(req.body);
+
     if(!board) return error(res, "not saved");
     res.json(board);
   });

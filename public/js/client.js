@@ -25,7 +25,7 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     .state('boardsindex', {
       url: "/boards",
       templateUrl: "/templates/boards/index.html",
-      controller: 'BoardController as boardController'
+      controller: 'BoardIndexController as BoardIndexController'
     })
 
     // .state('boardshow', {
@@ -37,7 +37,7 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     .state('boardsnew', {
         url: "/boards/new",
         templateUrl: "/templates/boards/new.html",
-        controller: 'BoardController as boardController'
+        controller: 'BoardNewController as BoardNewController'
     })
 
 
@@ -49,7 +49,7 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     .state('moviesindex', {
     	url:"/movies",
     	templateUrl: "/templates/movies/show.html",
-    	controller: 'MovieController as movieController'
+    	controller: 'MovieIndexController as MovieIndexController'
     })
 
     .state('movieSearch', {
@@ -58,6 +58,15 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     	controller: 'OmdbController as omdbController'
 
     });
+
+ //    $stateProvider
+	// //omdb search route
+ //    .state('OMDBsearch',{
+ //    	url:"https://www.omdbapi.com/?t=",
+ //    	templateUrl: "/templates/movies/movieSearch.html",
+ //    	controller: 'OmdbController as omdbController'
+
+    // });
 
     // .state('moviesshow', {
     // 	url:"/movies/:id",

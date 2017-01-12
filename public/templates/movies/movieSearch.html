@@ -1,4 +1,23 @@
-<div class="animated zoomInRight">
+
+<div>
+ <form id="getOmovie" ng-submit = "omdbController.searchOne()">
+    <input name = "title" id="searchOmovie" placeholder="Search Movie Title" ng-model = 'omdbController.title'></input>
+    <input type="submit" value='search'>
+  </form>
+  <img src = "{{omdbController.returnObject.Poster}}">
+    <h2>{{omdbController.returnObject.Title}}</h2>
+    <h3>{{omdbController.returnObject.Director}}</h3>
+    <h3>{{omdbController.returnObject.Year}}</h3>
+    <h3>{{omdbController.returnObject.Plot}}</h3>
+  
+
+</div>
+
+
+
+
+
+<!-- <div class="animated zoomInRight">
     <div class="input-group search-bar">
       <input type="text" ng-model="movieController.omdbController" ng-model-options="{ debounce: 800 }" class="form-control" placeholder="Enter full movie name" value = "search" autofocus />
       <input type = "submit" onclick="fetch()" value = "+">
@@ -63,3 +82,4 @@
     </div>
   </div>
 </div>
+ -->
