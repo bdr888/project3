@@ -4,15 +4,15 @@ angular.module('filmschoolApp')
 	.controller('MovieController', movieController)
 	.controller('OmdbController', omdbController);
 
-	movieController.$inject = ['MovieFactory','$resource'];
-	function movieController (MovieFactory,$resource) {
-		var self = this;
-		self.all = [];
-		self.queryMovies = queryMovies;
+	movieController.$inject = ['$http'];
+	function movieController ($http) {
+		var vm = this;
+		vm.all = [];
+		vm.queryMovies = queryMovies;
 
 		function queryMovies () {
-			self.all = MovieFactory.query({});
-			console.log(self.all);
+			vm.all = MovieFactory.query({});
+			console.log(vm.all);
 		}
 		queryMovies();
 
@@ -20,33 +20,35 @@ angular.module('filmschoolApp')
     // /////////////////////////////////////////////////////////
 		}
 
-	omdbController.$inject = ['OmdbFactory','$resource'];
-	function omdbController (OmdbFactory,$resource) {
+	omdbController.$inject = ['$http'];
+	function omdbController ($http) {
 		console.log('hit omdbController!');
-		
-		  function saveMovie (){
-			// Figure out what goes here:
-			var self = this;
-			    self.$watch('search', function() {
-      		fetch();
-    	});
 
-    	self.search = "Sherlock Holmes";
+		var vm = this;
 
-    	function fetch() {
-      		omdbFactory.get("https://www.omdbapi.com/?t=" + self.search + "&tomatoes=true&plot=full")
-        	.then(function(response) {
-          	self.details = response.data;
-        });
 
-      		omdbFactory.get("https://www.omdbapi.com/?s=" + self.search)
-        	.then(function(response) {
-          	self.related = response.data;
+
+    function fetch(search) {
+      $http.get("https://www.omdbapi.com/?t=" + vm.search + "&tomatoes=true&plot=full")
+        .then(function(response) {
+          vm.details = response.data;
         });
     }
-    //movie as argument?
-    self.update = function(movie) {
-      self.search = movie.Title;
-    };
-	}
-	}
+
+
+      $http.get("https://www.omdbapi.com/?s=" + vm.search)
+        .then(function(response) {
+          vm.related = response.data;
+        });
+    }
+
+ //    $scope.update = function(movie) {
+ //      vm.search = movie.Title;
+ //    };
+
+ //    $scope.select = function() {
+ //      vm.setSelectionRange(0, vm.value.length);
+ //    };
+  
+	
+	// }

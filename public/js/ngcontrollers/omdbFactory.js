@@ -5,6 +5,6 @@ Omovie.$inject= ['$resource'];
 
 function Omovie($resource) {
 	return $resource(
-		'http://www.omdbapi.com/'
+		'http://www.omdbapi.com/t=?'
 		);
 }

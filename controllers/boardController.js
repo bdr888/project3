@@ -29,7 +29,8 @@ function show(req, res) {
 }
 
 function create(req, res) {
-	Board.create(req.body).then(function(board){
+	Board.create(req.body)
+  .then(function(board){
     if(!board) return error(res, "not saved");
     res.json(board);
   });
