@@ -27,13 +27,13 @@ function BoardIndexController($http) {
 	getAllBoards();
 }
 
-BoardShowController.$inject = ["$http", "$routeParams"];
-function BoardShowController($http, $routeParams) {
+BoardShowController.$inject = ["$http", "$stateParams"];
+function BoardShowController($http, $stateParams) {
 	var vm = this;
 	
 	function getOneBoard() {
-		console.log($routeParams.id);
-		$http.get('/api/board/'+$routeParams.id)
+		console.log($stateParams.boardid);
+		$http.get('/api/board/'+$stateParams.boardid)
 			.then(function(response) {
 				console.log(response);
 				vm.oneBoard = response.data;
@@ -54,6 +54,7 @@ function BoardNewController($http, $location) {
 			.then(function(response) {
 				console.log(vm.newBoard);
 				var board = response.data;
+				console.log(response);
 				$location.path("/boards/" + board.id);
 			});		
 	}

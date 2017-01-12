@@ -28,17 +28,19 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
       controller: 'BoardIndexController as BoardIndexController'
     })
 
-    // .state('boardshow', {
-    //   url: "/boards/{boardid}",
-    //   templateUrl: "/templates/boards/show.html",
-    //   controller: 'BoardController as boardController'
-    // });
-
     .state('boardsnew', {
         url: "/boards/new",
         templateUrl: "/templates/boards/new.html",
         controller: 'BoardNewController as BoardNewController'
     })
+
+    .state('boardshow', {
+      url: "/boards/:boardid",
+      templateUrl: "/templates/boards/show.html",
+      controller: 'BoardShowController as BoardShowController'
+    })
+
+    
 
 
 

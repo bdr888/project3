@@ -3,7 +3,7 @@
 <head>
 	<title>Movie Website</title>
 
-	<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	  <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
 	  <script src="/bower_components/angular/angular.min.js"></script>
 	  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -19,14 +19,19 @@
 <body ng-app = "filmschoolApp">
 	<div class="container">
 	
-	<nav>
-      <ul>
-        <li><a href="/">Tun.r</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/artists">Artists</a></li>
-        <li><a href="/artists/new">Add Artist</a></li>
-      </ul>
-    </nav>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
 
 	<section class="main">
 		<div class="main" ui-view>
