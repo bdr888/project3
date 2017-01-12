@@ -29,29 +29,29 @@
 	<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
+      <a class="navbar-brand" href="#">Film School</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="boards">Boards</a></li>
-      <li><a href="movies">Movies</a></li>
-      <li><a href="about">About</a></li>
+      <li class="active"><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="boardsindex">Boards</a></li>
+      <li><a ui-sref="moviesindex">Movies</a></li>
+      <li><a ui-sref="boardsnew">New Board</a></li>
+      <li><a ui-sref="movieSearch">Search</a></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    	<li><a href="about">About</a></li>
     </ul>
   </div>
 </nav>
 
 	<section class="main">
-		<div class="main" ui-view>
-			<a ui-sref="boardsindex">Boards index</a>
-			<a ui-sref="moviesindex">Movies index</a>
 
-		</div>	
+	
+	<div class="main" ui-view>
+	</div>
+
 	</section>	
-
-			<a ui-sref="movieSearch">OMDB search</a>
-
-		</div>		
-
 
 	</div><!-- end container div -->
 
