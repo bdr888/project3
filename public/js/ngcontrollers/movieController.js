@@ -48,8 +48,8 @@ function MovieShowController($http, $routeParams) {
 	getOneMovie();
 }
 
-MovieNewController.$inject = ["$http", "$location"];
-function MovieNewController($http, $location) {
+MovieNewController.$inject = ["$http", "$location", "$stateParams"];
+function MovieNewController($http, $location, $stateParams) {
 	var vm = this;
 	vm.saveMovie= saveMovie;
 	
@@ -58,8 +58,8 @@ function MovieNewController($http, $location) {
 		$http.post('/api/Movie/', vm.newMovie)
 			.then(function(response) {
 				console.log(vm.newMovie);
-				var movie = response.data;
-				$location.path("/movies/" + movie.id);
+				var movie = response.data.imdbID;
+				$location.path("/movies/" + movie.imdbID);
 			});		
 	}
 

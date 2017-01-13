@@ -1,5 +1,3 @@
-console.log('OMDBController.js hello World');
-
 angular.module('filmschoolApp')
 	.controller('OmdbController', OmdbController);
 
@@ -7,10 +5,8 @@ angular.module('filmschoolApp')
 	function OmdbController($http, $stateParams) {
 		
 		var vm = this;
-
+		var searchResult;
 		vm.searchOne = searchOne;
-		console.log("inside OmdbController");
-		console.log($stateParams.data);
 	
 	function searchOne() {
 		console.log("inside searchOne");
@@ -18,14 +14,21 @@ angular.module('filmschoolApp')
 
 		$http.get("https://www.omdbapi.com/?t=" + vm.title)
 			.then(function(response) {
-				// console.log("inside searchOne.get.then") - >affirmative
-				// console.log($stateParams.id);
-				 console.log(response.data);
+				searchResult = response.data;
+				// console.log(searchResult);
 				 vm.returnObject = response.data;
-				 console.log(vm.returnObject);
-				//vm.oneOmovie = response.data;
-
+				 // console.log(vm.returnObject);
+				searchResult = vm.returnObject;
 		});
-}
-		// searchOne();
+	}
+
+	function saveMovie() {
+		$http.post('/api/Movie/', vm.returnObject)
+			.then(function(response) {
+				console.log("saveMovie fired");
+				console.log(vm.returnObject);
+				var movie = response.data.imdbID;
+				$location.path("/movies/" + movie.imdbID);
+			});
+	}
 }

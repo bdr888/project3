@@ -1,15 +1,29 @@
 
 <div>
- <form id="getOmovie" ng-submit = "omdbController.searchOne()">
-    <input name = "title" id="searchOmovie" placeholder="Search Movie Title" ng-model = 'omdbController.title'></input>
+
+ <form ng-submit = "omdbController.searchOne()">
+    <input name = "title" placeholder="Search Movie Title" ng-model = 'omdbController.title'></input>
     <input type="submit" value='search'>
   </form>
+
+  <button ng-submit = "omdbController.saveMovie()">ng submit saveMovie()</button>
+
   <img src = "{{omdbController.returnObject.Poster}}">
     <h2>{{omdbController.returnObject.Title}}</h2>
     <h3>{{omdbController.returnObject.Director}}</h3>
     <h3>{{omdbController.returnObject.Year}}</h3>
     <h3>{{omdbController.returnObject.Plot}}</h3>
+
+    <div>
+
+    <form ng-submit = "omdbController.saveMovie()">
+    <input name = "title" placeholder="movie title" ng-model = 'omdbController.returnObject'></input>
+    <input type="submit" value="Save to your movies">
+    </form>
+
+    <button onclick="saveMovie()">Run saveMovie()</button>
   
+    </div>
 
 </div>
 
