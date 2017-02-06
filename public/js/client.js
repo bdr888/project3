@@ -28,17 +28,19 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
       controller: 'BoardIndexController as BoardIndexController'
     })
 
-    // .state('boardshow', {
-    //   url: "/boards/{boardid}",
-    //   templateUrl: "/templates/boards/show.html",
-    //   controller: 'BoardController as boardController'
-    // });
-
     .state('boardsnew', {
         url: "/boards/new",
         templateUrl: "/templates/boards/new.html",
         controller: 'BoardNewController as BoardNewController'
     })
+
+    .state('boardshow', {
+      url: "/boards/:boardid",
+      templateUrl: "/templates/boards/show.html",
+      controller: 'BoardShowController as BoardShowController'
+    })
+
+    
 
 
 
@@ -52,17 +54,25 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     	controller: 'MovieIndexController as MovieIndexController'
     })
 
+    // .state('moviesnew', {
+    //     url: "/movies",
+    //     templateUrl: "/templates/movies/index.html",
+    //     controller: 'OmdbController as omdbController'
+    // })
+
     .state('movieSearch', {
     	url:"/search",
     	templateUrl: "/templates/movies/movieSearch.html",
     	controller: 'OmdbController as omdbController'
 
     })
+    
     .state('moviesnew', {
         url: "/movies/new",
         templateUrl: "/templates/movies/new.html",
         controller: 'MovieNewController as MovieNewController'
-    });
+    })
+
 
  //    $stateProvider
 	// //omdb search route
@@ -82,7 +92,12 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     // User Routes //
 
 
+.state('home', {
+        url:"/home",
+        templateUrl: "/templates/home.html",
+        controller: 'BoardIndexController as BoardIndexController'
 
+    });
  
 
 

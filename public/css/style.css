@@ -1,8 +1,19 @@
-.card-inverse {
-	background-color: #333; 
-	border-color: #333
+
+
+/*.card-title {
+  color: white;
 }
 
-.nav {
-	background-color: #333;
+.card-text {
+  color: white;
+}*/
+
+body {
+	background-color: #D3D3D3;
 }
+
+/*.col-md-4 {
+  display: inline-block;
+}*/
+
+

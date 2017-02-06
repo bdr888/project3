@@ -27,7 +27,6 @@ function show(req, res) {
 }
 
 function create(req, res) {
-
 	Board.create(req.body).then(function(board){
     console.log(req.body);
 

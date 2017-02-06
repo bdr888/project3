@@ -51,18 +51,19 @@ function MovieShowController($http, $stateParams) {
 MovieNewController.$inject = ["$http", "$location"];
 function MovieNewController($http, $location) {
 	console.log("inside MovieNewController");
-	var vm = this;
-	vm.saveMovie= saveMovie;
+
 	console.log(saveMovie);
 	
+	var vm = this;
+	vm.saveMovie= saveMovie;
 
 	function saveMovie() {
-		console.log("inside saveMovie");
+		console.log("inside saveMovie" + vm);
 		$http.post('/api/Movie/', vm.newMovie)
 			.then(function(response) {
 				console.log(vm.newMovie);
-				var movie = response.data;
-				$location.path("/movies/" + movie.id);
+				var movie = response.data.imdbID;
+				$location.path("/movies/" + movie.imdbID);
 			});		
 	}
 

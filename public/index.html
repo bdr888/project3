@@ -3,7 +3,9 @@
 <head>
 	<title>Movie Website</title>
 
-	  <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	  <link rel="stylesheet" type="text/css" href="/css/style.css"></link>
 	  <script src="/bower_components/angular/angular.min.js"></script>
 	  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -23,13 +25,33 @@
 
 <body ng-app = "filmschoolApp">
 	<div class="container">
-		
-		<div ui-view>
-			<a ui-sref="boardsindex">Boards index</a>
-			<a ui-sref="moviesindex">Movies index</a>
-			<a ui-sref="movieSearch">OMDB search</a>
+	
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Film School</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a ui-sref="home">Home</a></li>
+      <li><a ui-sref="boardsindex">Boards</a></li>
+      <li><a ui-sref="moviesindex">Movies</a></li>
+      <li><a ui-sref="boardsnew">New Board</a></li>
+      <li><a ui-sref="movieSearch">Search</a></li>
+      
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    	<li><a href="about">About</a></li>
+    </ul>
+  </div>
+</nav>
 
-		</div>		
+	<section class="main">
+
+	
+	<div class="main" ui-view>
+	</div>
+
+	</section>	
 
 	</div><!-- end container div -->
 
