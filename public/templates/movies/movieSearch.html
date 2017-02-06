@@ -5,10 +5,13 @@
     <input type="submit" value='search'>
   </form>
   <img src = "{{omdbController.returnObject.Poster}}">
+    
     <h2>{{omdbController.returnObject.Title}}</h2>
     <h3>{{omdbController.returnObject.Director}}</h3>
     <h3>{{omdbController.returnObject.Year}}</h3>
     <h3>{{omdbController.returnObject.Plot}}</h3>
+
+    <input ng-click="MovieNewController.saveMovie()" ng-model="MovieNewController.newMovie" name = "addNewMovie" type = "submit" value = "ADD MOVIE">
   
 
 </div>

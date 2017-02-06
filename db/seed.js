@@ -126,7 +126,7 @@ imdbID: "tt4052882",
 Type: "movie",
 Response: "True"
 }
-	}])
+	])
 	.then(function(movie){
 	DB.Movie.bulkCreate(sampleMovies);
 	});

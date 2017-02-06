@@ -32,13 +32,13 @@ function MovieIndexController($http) {
 	getAllMovies();
 }
 
-MovieShowController.$inject = ["$http", "$routeParams"];
-function MovieShowController($http, $routeParams) {
+MovieShowController.$inject = ["$http", "$stateParams"];
+function MovieShowController($http, $stateParams) {
 	var vm = this;
 	
 	function getOneMovie() {
-		console.log($routeParams.id);
-		$http.get('/api/movie/'+$routeParams.id)
+		console.log($stateParams.id);
+		$http.get('/api/movie/'+$stateParams.id)
 			.then(function(response) {
 				console.log(response);
 				vm.oneMovie = response.data;
@@ -50,11 +50,14 @@ function MovieShowController($http, $routeParams) {
 
 MovieNewController.$inject = ["$http", "$location"];
 function MovieNewController($http, $location) {
+	console.log("inside MovieNewController");
 	var vm = this;
 	vm.saveMovie= saveMovie;
+	console.log(saveMovie);
 	
 
 	function saveMovie() {
+		console.log("inside saveMovie");
 		$http.post('/api/Movie/', vm.newMovie)
 			.then(function(response) {
 				console.log(vm.newMovie);
