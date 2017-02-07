@@ -66,6 +66,13 @@ angular.module("filmschoolApp", ['ui.router', 'ngResource'])
     	controller: 'OmdbController as omdbController'
 
     })
+    
+    .state('moviesnew', {
+        url: "/movies/new",
+        templateUrl: "/templates/movies/new.html",
+        controller: 'MovieNewController as MovieNewController'
+    })
+
 
  //    $stateProvider
 	// //omdb search route
