@@ -52,10 +52,10 @@ MovieNewController.$inject = ["$http", "$location"];
 function MovieNewController($http, $location) {
 	console.log("inside MovieNewController");
 
-	console.log(saveMovie);
 	
 	var vm = this;
 	vm.saveMovie= saveMovie;
+	console.log(saveMovie);
 
 	function saveMovie() {
 		console.log("inside saveMovie" + vm);
