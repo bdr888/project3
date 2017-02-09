@@ -9,11 +9,16 @@
 }*/
 
 body {
-	background-color: #D3D3D3;
+	/*background-color: #D3D3D3;*/
 }
 
 /*.col-md-4 {
   display: inline-block;
 }*/
+
+.card-group .card {
+	height: 220px;
+	padding: 10px
+}
 
 

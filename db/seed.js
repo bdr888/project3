@@ -16,19 +16,43 @@ console.log("sampleUsers: " + sampleUsers);
 var sampleBoards = [
 
 	{
-	title: "Shark Movies",
-	description: "Movies about sharks"
+	title: "Movies about bikes",
+	description: "Movies where a bicycle plays a role in the plot"
 	},
 
 	{
-	title: "Survival Movies",
-	description: "Movies where main character is in a survival situation"
+	title: "Wes Anderson movies",
+	description: "Wes Anderson collection"
 	},
 
 	{
 	//note id omitted
-	title: "Water Movies",
-	description: "Movies set in or around water"
+	title: "Batman movies",
+	description: "All Batman movies"
+	},
+
+	{
+	//note id omitted
+	title: "Space survival movies",
+	description: "Like Alien or Event Horizon, surviving on a spaceship"
+	},
+
+	{
+	//note id omitted
+	title: "Movies set in China",
+	description: "Movies with scenes in China"
+	},
+
+	{
+	//note id omitted
+	title: "Jennifer Lawrence",
+	description: "Movies with Jennifer Lawrence"
+	},
+
+	{
+	//note id omitted
+	title: "Best supporting actress",
+	description: "Movies that won an Oscar for Best Supporting Actress"
 	}
 
 
